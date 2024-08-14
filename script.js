@@ -105,6 +105,16 @@ const fortunes = [
     "The only place where success comes before work is in the dictionary. - Vidal Sassoon"
 ];
 
+const specialCommands = {
+    'Amelia': `
+        <div style="color: pink;">
+            Amelia is my amazing girlfriend who brings so much joy into my life. 
+            She's kind, smart, and beautiful, and I feel incredibly lucky to have her by my side.
+            She's the one who always supports me, and this terminal wouldn't be complete without a special mention of her.
+        </div>
+    `
+};
+
 const commands = {
     'help': `
         <div>Available commands:</div>
