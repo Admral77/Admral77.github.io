@@ -15,106 +15,6 @@ const welcomeMessage = `
 
 output.innerHTML += welcomeMessage;
 
-const fortunes = [
-    "In the middle of difficulty lies opportunity. - Albert Einstein",
-    "The best way to predict the future is to invent it. - Alan Kay",
-    "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment. - Buddha",
-    "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
-    "The only way to do great work is to love what you do. - Steve Jobs",
-    "If you can dream it, you can achieve it. - Zig Ziglar",
-    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
-    "Strive not to be a success, but rather to be of value. - Albert Einstein",
-    "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
-    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
-    "You miss 100% of the shots you don't take. - Wayne Gretzky",
-    "The only limit to our realization of tomorrow is our doubts of today. - Franklin D. Roosevelt",
-    "The journey of a thousand miles begins with one step. - Lao Tzu",
-    "Don’t count the days, make the days count. - Muhammad Ali",
-    "It does not matter how slowly you go as long as you do not stop. - Confucius",
-    "The only way to achieve the impossible is to believe it is possible. - Charles Kingsleigh",
-    "The way to get started is to quit talking and begin doing. - Walt Disney",
-    "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
-    "Everything you’ve ever wanted is on the other side of fear. - George Addair",
-    "Believe you can and you're halfway there. - Theodore Roosevelt",
-    "I can't change the direction of the wind, but I can adjust my sails to always reach my destination. - Jimmy Dean",
-    "Keep your face always toward the sunshine—and shadows will fall behind you. - Walt Whitman",
-    "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
-    "The harder you work for something, the greater you'll feel when you achieve it. - Unknown",
-    "Start where you are. Use what you have. Do what you can. - Arthur Ashe",
-    "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
-    "Your limitation—it's only your imagination. - Unknown",
-    "Push yourself, because no one else is going to do it for you. - Unknown",
-    "Great things never come from comfort zones. - Unknown",
-    "Dream it. Wish it. Do it. - Unknown",
-    "Success doesn’t just find you. You have to go out and get it. - Unknown",
-    "The harder you work, the luckier you get. - Gary Player",
-    "Dream bigger. Do bigger. - Unknown",
-    "Don't stop when you're tired. Stop when you're done. - Unknown",
-    "Wake up with determination. Go to bed with satisfaction. - Unknown",
-    "Do something today that your future self will thank you for. - Unknown",
-    "Little things make big days. - Unknown",
-    "It's going to be hard, but hard does not mean impossible. - Unknown",
-    "Don't wait for opportunity. Create it. - Unknown",
-    "Sometimes we're tested not to show our weaknesses, but to discover our strengths. - Unknown",
-    "The key to success is to focus on goals, not obstacles. - Unknown",
-    "Dream it. Believe it. Build it. - Unknown",
-    "Your only limit is you. - Unknown",
-    "A year from now, you may wish you had started today. - Karen Lamb",
-    "It’s not whether you get knocked down, it’s whether you get up. - Vince Lombardi",
-    "If you want to lift yourself up, lift up someone else. - Booker T. Washington",
-    "The way to get started is to quit talking and begin doing. - Walt Disney",
-    "Some people want it to happen, some wish it would happen, others make it happen. - Michael Jordan",
-    "Don't count the days, make the days count. - Muhammad Ali",
-    "It always seems impossible until it's done. - Nelson Mandela",
-    "Whether you think you can or you think you can't, you're right. - Henry Ford",
-    "Success is not how high you have climbed, but how you make a positive difference to the world. - Roy T. Bennett",
-    "Don't let yesterday take up too much of today. - Will Rogers",
-    "You learn more from failure than from success. Don’t let it stop you. Failure builds character. - Unknown",
-    "It’s not whether you get knocked down, it’s whether you get up. - Vince Lombardi",
-    "If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you. - Steve Jobs",
-    "People who are crazy enough to think they can change the world, are the ones who do. - Rob Siltanen",
-    "Failure will never overtake me if my determination to succeed is strong enough. - Og Mandino",
-    "We may encounter many defeats but we must not be defeated. - Maya Angelou",
-    "Knowing is not enough; we must apply. Wishing is not enough; we must do. - Johann Wolfgang Von Goethe",
-    "Imagine your life is perfect in every respect; what would it look like? - Brian Tracy",
-    "Security is mostly a superstition. Life is either a daring adventure or nothing. - Helen Keller",
-    "The man who has confidence in himself gains the confidence of others. - Hasidic Proverb",
-    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
-    "Creativity is intelligence having fun. - Albert Einstein",
-    "What you lack in talent can be made up with desire, hustle, and giving 110% all the time. - Don Zimmer",
-    "Do what you can with all you have, wherever you are. - Theodore Roosevelt",
-    "Develop an ‘Attitude of Gratitude’. Say thank you to everyone you meet for everything they do for you. - Brian Tracy",
-    "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
-    "To see what is right and not do it is a lack of courage. - Confucius",
-    "Reading is to the mind, as exercise is to the body. - Brian Tracy",
-    "Fake it until you make it! Act as if you had all the confidence you require until it becomes your reality. - Brian Tracy",
-    "The future belongs to the competent. Get good, get better, be the best! - Brian Tracy",
-    "For every reason it’s not possible, there are hundreds of people who have faced the same circumstances and succeeded. - Jack Canfield",
-    "Things work out best for those who make the best of how things work out. - John Wooden",
-    "A room without books is like a body without a soul. - Marcus Tullius Cicero",
-    "I think, therefore I am. - René Descartes",
-    "It’s the possibility of having a dream come true that makes life interesting. - Paulo Coelho",
-    "I have not failed. I've just found 10,000 ways that won't work. - Thomas A. Edison",
-    "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. - Roy T. Bennett",
-    "If you really look closely, most overnight successes took a long time. - Steve Jobs",
-    "The way to get started is to quit talking and begin doing. - Walt Disney",
-    "We generate fears while we sit. We overcome them by action. - Dr. Henry Link",
-    "Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don’t quit. - Conrad Hilton",
-    "Don't let the fear of losing be greater than the excitement of winning. - Robert Kiyosaki",
-    "In order to succeed, we must first believe that we can. - Nikos Kazantzakis",
-    "The only place where success comes before work is in the dictionary. - Vidal Sassoon"
-];
-
-const specialCommands = {
-    'Amelia': `
-        <div style="color: pink;">
-            Amelia is my amazing girlfriend who brings so much joy into my life. 
-            She's kind, smart, and beautiful, and I feel incredibly lucky to have her by my side.
-            She's the one who always supports me, and this terminal wouldn't be complete without a special mention of her.
-        </div>
-    `
-};
-
 const commands = {
     'help': `
         <div>Available commands:</div>
@@ -213,6 +113,17 @@ const commands = {
 
 const invalidCommandResponse = 'command not found: ';
 
+// Special command for "Amelia" that is not included in the help menu
+const specialCommands = {
+    'Amelia': `
+        <div style="color: pink;">
+            Amelia is my amazing girlfriend who brings so much joy into my life. 
+            She's kind, smart, and beautiful, and I feel incredibly lucky to have her by my side.
+            She's the one who always supports me, and this terminal wouldn't be complete without a special mention of her.
+        </div>
+    `
+};
+
 commandInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const input = commandInput.value.trim();
@@ -220,6 +131,10 @@ commandInput.addEventListener('keydown', function(event) {
 
         if (input === 'clear') {
             output.innerHTML = '';  // Clear the terminal screen
+        } else if (specialCommands[input]) {
+            response = specialCommands[input];
+            output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
+            output.innerHTML += response;
         } else {
             response = commands[input] || `<div>${invalidCommandResponse}${input}</div>`;
             output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
