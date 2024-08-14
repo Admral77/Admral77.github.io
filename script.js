@@ -26,6 +26,7 @@ const commands = {
         <div>- echo contact: View contact information</div>
         <div>- sudo make me a sandwich: Ask the terminal to make a sandwich</div>
         <div>- rm -rf /: Try to delete everything (don’t do it!)</div>
+        <div>- fortune: Get a random motivational quote</div>
         <div>- clear: Clear the terminal screen</div>
     `,
     'ls blog': `
@@ -105,6 +106,8 @@ const commands = {
         <div>Nice try. Not on my watch.</div>
     `,
     'fortune': `
+        <div>Keep pushing forward, you're doing great!</div>
+    `,
     'clear': 'clear'
 };
 
