@@ -108,13 +108,7 @@ const commands = {
     'fortune': `
         <div>Keep pushing forward, you're doing great!</div>
     `,
-    'clear': 'clear'
-};
-
-const invalidCommandResponse = 'command not found: ';
-
-// Special command for "Amelia" that is not included in the help menu
-const specialCommands = {
+    'clear': 'clear',
     'Amelia': `
         <div style="color: pink;">
             Amelia is my amazing girlfriend who brings so much joy into my life. 
@@ -124,6 +118,8 @@ const specialCommands = {
     `
 };
 
+const invalidCommandResponse = 'command not found: ';
+
 commandInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const input = commandInput.value.trim();
@@ -131,10 +127,6 @@ commandInput.addEventListener('keydown', function(event) {
 
         if (input === 'clear') {
             output.innerHTML = '';  // Clear the terminal screen
-        } else if (specialCommands[input]) {
-            response = specialCommands[input];
-            output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
-            output.innerHTML += response;
         } else {
             response = commands[input] || `<div>${invalidCommandResponse}${input}</div>`;
             output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
