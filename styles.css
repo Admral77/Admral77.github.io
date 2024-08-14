@@ -89,3 +89,45 @@ body {
 .full-page-project a:hover {
     text-decoration: underline;
 }
+
+
+.full-page-project,
+.full-page-blog {
+    background-color: #1c1c1c;
+    color: #d3d3d3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.full-page-project h1,
+.full-page-blog h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.full-page-project p,
+.full-page-blog p,
+.full-page-project ul,
+.full-page-blog ul {
+    margin-bottom: 10px;
+}
+
+.full-page-project ul,
+.full-page-blog ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.full-page-project a,
+.full-page-blog a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.full-page-project a:hover,
+.full-page-blog a:hover {
+    text-decoration: underline;
+}
