@@ -26,14 +26,42 @@ const commands = {
     `,
     'ls projects': `
         <div>projects/</div>
-        <div>&nbsp;&nbsp;&nbsp;├── project_01/</div>
-        <div>&nbsp;&nbsp;&nbsp;├── project_02/</div>
-        <div>&nbsp;&nbsp;&nbsp;└── project_03/</div>
+        <div>&nbsp;&nbsp;&nbsp;└── project_01/</div>
     `,
     'cat projects/project_01/info.txt': `
-        <div>Project: Example Project 1</div>
-        <div>Description: This is an example description of your project.</div>
-        <div>Link: <a href="#">Project URL</a></div>
+        <div>Project: Terminal-Themed Portfolio Website</div>
+        <div>Description: A personal portfolio website designed to look like a Linux terminal, where users can interact with various commands to explore different sections.</div>
+        <div>Features:</div>
+        <ul>
+            <li>Interactive command-line interface</li>
+            <li>Blog section with posts</li>
+            <li>Projects section with detailed project pages</li>
+            <li>Contact information display</li>
+            <li>Fun Easter eggs and terminal-like responses</li>
+        </ul>
+        <div>To view the full project page, enter: cat projects/project_01/full_page</div>
+    `,
+    'cat projects/project_01/full_page': `
+        <div class="full-page-project">
+            <h1>Terminal-Themed Portfolio Website</h1>
+            <p><strong>Description:</strong> This project is a personal portfolio website designed to look and feel like a Linux terminal. Users can type commands to navigate through the content, view blog posts, project details, and even interact with fun Easter eggs.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Interactive command-line interface</li>
+                <li>Blog section with posts</li>
+                <li>Projects section with detailed project pages</li>
+                <li>Contact information display</li>
+                <li>Fun Easter eggs and terminal-like responses</li>
+            </ul>
+            <p><strong>Technologies Used:</strong></p>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>Vanilla JavaScript for interactivity</li>
+            </ul>
+            <p><strong>Demo:</strong> <a href="https://admral77.pages.dev" target="_blank">View Live Demo</a></p>
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/Admral77/terminal-portfolio" target="_blank">View on GitHub</a></p>
+        </div>
     `,
     'cat skills': `
         <div>Skills/</div>
