@@ -68,7 +68,7 @@ const commands = {
                 <li>Vanilla JavaScript for interactivity</li>
             </ul>
             <p><strong>Demo:</strong> <a href="https://admral77.pages.dev" target="_blank">View Live Demo</a></p>
-            <p><strong>GitHub Repository:</strong> <a href="https://github.com/Admral77/terminal-portfolio" target="_blank">View on GitHub</a></p>
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/Admral77/Website-Admral77" target="_blank">View on GitHub</a></p>
         </div>
     `,
     'cat skills': `
