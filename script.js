@@ -8,6 +8,7 @@ const commands = {
         <div>- ls projects</div>
         <div>- cat skills</div>
         <div>- echo contact</div>
+        <div>- clear</div>
     `,
     'ls blog': `
         <div>blog/</div>
@@ -52,6 +53,7 @@ const commands = {
     'fortune': `
         <div>"In the middle of difficulty lies opportunity." - Albert Einstein</div>
     `,
+    'clear': 'clear'
 };
 
 const invalidCommandResponse = 'command not found: ';
@@ -59,8 +61,16 @@ const invalidCommandResponse = 'command not found: ';
 commandInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const input = commandInput.value.trim();
-        const response = commands[input] || `<div>${invalidCommandResponse}${input}</div>`;
-        output.innerHTML += `<div>${response}</div>`;
+        let response;
+
+        if (input === 'clear') {
+            output.innerHTML = '';  // Clear the terminal screen
+        } else {
+            response = commands[input] || `<div>${invalidCommandResponse}${input}</div>`;
+            output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
+            output.innerHTML += `<div>${response}</div>`;
+        }
+
         commandInput.value = '';
         window.scrollTo(0, document.body.scrollHeight);
     }
