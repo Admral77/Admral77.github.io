@@ -4,11 +4,13 @@ const commandInput = document.getElementById('command-input');
 const commands = {
     'help': `
         <div>Available commands:</div>
-        <div>- ls blog</div>
-        <div>- ls projects</div>
-        <div>- cat skills</div>
-        <div>- echo contact</div>
-        <div>- clear</div>
+        <div>- ls blog: View list of blog posts</div>
+        <div>- cat blog/[post_name]: View specific blog post (e.g., cat blog/post_01.txt)</div>
+        <div>- ls projects: View list of projects</div>
+        <div>- cat projects/[project_name]/info.txt: View project details (e.g., cat projects/project_01/info.txt)</div>
+        <div>- cat skills: View your skills</div>
+        <div>- echo contact: View contact information</div>
+        <div>- clear: Clear the terminal screen</div>
     `,
     'ls blog': `
         <div>blog/</div>
