@@ -16,6 +16,9 @@ const welcomeMessage =
 output.innerHTML += welcomeMessage;
 
 const commands = {
+    'start adventure': 
+        <div>Welcome to the Text Adventure Game! Type <strong>help</strong> to see a list of available commands.</div>
+    ,
     'help': 
         <div>Available commands:</div>
         <div>- ls blog: View list of blog posts</div>
