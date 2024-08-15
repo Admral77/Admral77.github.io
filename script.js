@@ -23,6 +23,7 @@ const commands = {
     'help': `
         <div>Available commands:</div>
         <div>- ls blog: View list of blog posts</div>
+        <div>- play galaga: Pew Pew</div>
         <div>- view blog [post_number]: View specific blog post (e.g., view blog 1)</div>
         <div>- ls projects: View list of projects</div>
         <div>- view project [project_number]: View specific project (e.g., view project 1)</div>
