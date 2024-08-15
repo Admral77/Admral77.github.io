@@ -16,6 +16,10 @@ const welcomeMessage = `
 output.innerHTML += welcomeMessage;
 
 const commands = {
+    'play galaga': `
+        <div id="galaga-game-container"></div>
+        <script src="galaga-game.js"></script>
+    `,
     'help': `
         <div>Available commands:</div>
         <div>- ls blog: View list of blog posts</div>
