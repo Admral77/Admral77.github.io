@@ -115,7 +115,74 @@ const commands = {
             She's kind, smart, and beautiful, and I feel incredibly lucky to have her by my side.
             She's the one who always supports me, and this terminal wouldn't be complete without a special mention of her.
         </div>
-    
+    'game': 
+        `<div class="game">
+            <h2>Galaga Simulator</h2>
+            <p>Welcome to the Galaga simulator!</p>
+            <p>Use the following controls:</p>
+            <ul>
+                <li><strong>Arrow Keys:</strong> Move the spaceship</li>
+                <li><strong>Spacebar:</strong> Shoot</li>
+            </ul>
+            <p>Objective: Destroy all the enemy ships and avoid getting hit.</p>
+            <pre>
+                 *
+                ***
+                 *
+               -----
+               |   |
+            </pre>
+            <p>Note: This is a simulation. No actual gameplay is implemented here.</p>
+        </div>`
+    // ... other commands ...
+};
+
+const invalidCommandResponse = 'command not found: ';
+
+commandInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        const input = commandInput.value.trim();
+        let response;
+
+        if (input === 'clear') {
+            output.innerHTML = '';  // Clear the terminal screen
+        } else {
+            response = commands[input] || `<div>${invalidCommandResponse}${input}</div>`;
+            output.innerHTML += `<div><span class="prompt">admral77@terminal:~$</span> ${input}</div>`;
+            output.innerHTML += `<div>${response}</div>`;
+        }
+
+        // Add the command to history and reset history index
+        if (input) {
+            commandHistory.push(input);
+            historyIndex = -1;
+        }
+
+        commandInput.value = '';
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    // Handle arrow keys for command history navigation
+    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        if (event.key === 'ArrowUp') {
+            if (historyIndex < commandHistory.length - 1) {
+                historyIndex++;
+            }
+        } else if (event.key === 'ArrowDown') {
+            if (historyIndex > 0) {
+                historyIndex--;
+            } else {
+                historyIndex = -1;
+            }
+        }
+
+        if (historyIndex !== -1) {
+            commandInput.value = commandHistory[commandHistory.length - 1 - historyIndex];
+        } else {
+            commandInput.value = '';
+        }
+    }
+});
 };
 
 const invalidCommandResponse = 'command not found: ';
